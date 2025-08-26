@@ -4,7 +4,8 @@ import Stripe from "stripe";
 const stripeSecretKey = process.env.STRIPE_SECRET_KEY;
 if (!stripeSecretKey) throw new Error("STRIPE_SECRET_KEY is not defined");
 
-const stripe = new Stripe(stripeSecretKey, { apiVersion: "2022-11-15" });
+/*const stripe = new Stripe(stripeSecretKey, { apiVersion: "2022-11-15" });*/
+const stripe = new Stripe(stripeSecretKey, { apiVersion: "2025-07-30.basil" });
 
 export async function POST(req: Request) {
   try {
